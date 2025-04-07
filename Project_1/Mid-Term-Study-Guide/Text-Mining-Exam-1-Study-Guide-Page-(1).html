@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body
+    {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      line-height: 1.2;
+      margin: 0;
+      padding: 10px;
+      columns: 4;
+      column-gap: 7px;
+    }
+    h1 { font-size:  8px; margin-top: 0; }
+    h2 { font-size:  12px; margin-top: 4px; margin-bottom: 2px; }
+    li { margin-bottom: 1px; }
+    ul, ol { margin: 0; padding-left: 10px; }
+    table, th, td { font-size: 10px; border: 1px black;}
+    table, th, td { border-style: dotted;}
+  </style>
+  <title></title>
+
+</head>
+<body>
+
+<h2>Forgettable Python Material</h2>
+
+x = np.array([
+  <ul>
+    [3,1,6,2,2,7],
+    <br>
+    [1,5,5,2,1,5] ])
+    <br>
+  </ul>
+(x, axis=0)) -> [ 4 6 11 4 3 12]
+<br>
+(x, axis=1)) -> [21 19]
+
+<ol>
+  <i><li>Difference between fit_transform() & transform():</li></i>
+  <ul>
+    <li>fit_transform(): Learns(fits) the vocabulary from the training data and then transforms the data into a numerical format. Used during training</li>
+    <li>transform(): Only transforms new data using the vocabulary learned from fit_transform() without modifying it. Used on test data.</li>
+  </ul>
+  <i><li>In and Outs for train_test_split():</li></i>
+  <ul>
+    <li>X (train and test) --> Features <br> Y (train and test) --> Labels</li>
+  </ul>
+  <i><li>Kinds of Data used as input to a classifier model</li></i>
+  <ol>
+    <li>Structured numerical data (tabular)</li>
+    <li>Text data</li>
+    <li>Image data</li>
+    <li>Categorical data</li>
+    <li>Time-Series data</li>
+  </ol>
+  <i><li>When is train_test_split used:</li></i>
+  <ul>
+    Used <b>before</b> vectors.
+  </ul>
+  <i><li>Prior: P(C) or the probability of each class is called:</li></i>
+</ol>
+
+<h2>Regex Commands</h2>
+<ol>
+  <li>Basic Matching</li>
+    <table>
+      <tr>
+        <td><b>.</b></td>
+        <td>anything</td>
+      </tr>
+      <tr>
+        <td>\d</td>
+        <td>[0-9] -- any non-digit</td>
+      </tr>
+      <tr>
+        <td>\D</td>
+        <td>[^0-9] -- non-digit</td>
+      </tr>
+      <tr>
+        <td>\w</td>
+        <td>[a-zA-Z0-9_] -- 'word' (letters & digits & _)</td>
+      </tr>
+      <tr>
+        <td>\W</td>
+        <td>[^\w] -- non-word</td>
+      </tr>
+      <tr>
+        <td>|_|</td>
+        <td>space</td>
+      </tr>
+      <tr>
+        <td>\t</td>
+        <td>a tab</td>
+      </tr>
+      <tr>
+        <td>\r</td>
+        <td>return</td>
+      </tr>
+      <tr>
+        <td>\n</td>
+        <td>newline</td>
+      </tr>
+      <tr>
+        <td>\s</td>
+        <td>[|_|\r\t\n\f] -- whitespace(|_|, \t, \r, \n)</td>
+      </tr>
+      <tr>
+        <td>\S</td>
+        <td>[^\s] -- non-whitespace</td>
+      </tr>
+      <tr>
+        <td>\*</td>
+        <td>An asterisk</td>
+      </tr>
+      <tr>
+        <td>\<b>.</b></td>
+        <td>A period</td>
+      </tr>
+    </table>
+
+  <li>Character Classes</li>
+  <ul>Carrot <b>'^'</b> in brackets is the negation operator.
+    <li><b>[</b>...<b>]</b> matches any of the character w/in the brackets.</li>
+    <li>Ex. <b>[</b>aeiou<b>]</b> matches vowels.</li>
+    <li>Ex. <b>[</b>^aeiou<b>]</b> matches non-vowels and non-letters</li>
+    <li>Ex. [^.] not a period</li>
+    <li><b>Ex. [e^] either 'e' or '^'</b></li>
+  </ul>
+  <b>Disjunction</b>: (X|Y) matches either X or Y.
+
+  <li>Boundaries</li>
+    <table>
+     <tr>
+       <td>^</td>
+       <td>Start of line</td>
+     </tr>
+     <tr>
+      <td>$</td>
+      <td>End of line</td>
+     </tr>
+     <tr>
+       <td>\b</td>
+       <td>word boundary</td>
+     </tr>
+     <tr>
+       <td>\B</td>
+       <td>non-word boundary</td>
+     </tr>
+     </table>
+
+  <li>Quantifiers</li>
+    <table>
+      <tr>
+        <td>X*</td>
+        <td>0 or more repetitions of X</td>
+      </tr>
+      <tr>
+        <td>X+</td>
+        <td>1 or more repetitions of X</td>
+      </tr>
+      <tr>
+        <td>X?</td>
+        <td>0 or 1 instances of X</td>
+      </tr>
+      <tr>
+        <td>X{m}</td>
+        <td>Exactly 'm' instances of X</td>
+      </tr>
+      <tr>
+        <td>X{m, }</td>
+        <td>At least 'm' instances of X</td>
+      </tr>
+      <tr>
+        <td>X{ ,n}</td>
+        <td>Up to 'n' instances of X</td>
+      </tr>
+      <tr>
+        <td>X{m,n}</td>
+        <td>Between 'm' & 'n' instances of X</td>
+      </tr>
+    </table>
+  <li>Date Example: '03-10-2022\n01/10/2022\n01/10/22\n1-10-22'</li>
+  <ul>
+    <li>Syntax For All</li>
+    <ul>
+      <li>Command: r<b>'\d{1,2}[/-]\d{2}[-/]\d{2,4}'</b></li>
+      <li>Output: ['03-10-2022', '01/10/2022', '01/10/22', '1-10-22'] </li>
+    </ul>
+  </ul>
+
+    <ul>
+      <li>Email Command Syntax</li>
+      <ul>
+        <li>Command: r<b>'[\w.-]+(?: at |@)\w+(?: dot|.)\w{3}'</b></li>
+        <li>Output: ['aname.last@gmail.com', 'aname_2@fgcu.edu', 'aname_2 at fgcu dot', 'abc-.@mail.com']</li>
+      </ul>
+    </ul>
+
+</ol>
+
+<h2>Bag of Words</h2>
+<ol>
+  <li>Vocab</li>
+  <ul>
+    <li>Documents: Sequence of tokens or terms. These can be thought of as separated by space||punctuations.</li>
+    <li>Corpus: The Collection of all documents in the data.</li>
+    <li>Vocabulary: Set of all unique words(terms) extracted from all document in the data.</li>
+    <li>Tokenization: Extracting words from text.</li>
+    <li>Stemming: Crude Heuristic process that chops off the ends of words w/o considering linguistic features of the word.</li>
+    <ul>
+      <li>Ex. argue, argued, arguing --> argu</li>
+    </ul>
+    <li>Lemmatization: Refers to the use of vocab and morphological analysis of words, aiming to return the base/dictionary form of the word, known as the lemme.</li>
+    <ul>
+      <li>Ex. argues, argued, arguing -> argue</li>
+    </ul>
+    <li>Stop Words: The process of removing frequently used words -- creates loss of meaning and sturcture of text</li>
+    <li>Bag of Words: Throwing tokens into a bag without order and labeled by document.</li>
+  </ul>
+  <li>Bag of Words Process</li>
+  <i>
+  <ol>
+    <li>Gather Documents</li>
+    <li>Preprocess(lowercase, stemming, stop word removal)</li>
+    <li>Tokenize-->Vocabulary</li>
+    <li>Create term-to-document matrix: rows-->each document; columns-->each token</li>
+    <li>Use Matrix as input to ML Algorithms (Class., clustering, summarizing)</li>
+  </ol>
+  </i>
+  <li>Matrix Types</li>
+  <table>
+    <tr> <!--First Row-->
+      <td>Doc</td>
+      <td>Text</td>
+      <td>Terms</td>
+    </tr>
+    <tr>
+      <td>d<sub>1</sub></td>
+      <td>ant ant bee</td>
+      <td>ant bee</td>
+    </tr>
+    <tr>
+      <td>d<sub>2</sub></td>
+      <td>dog bee dog hog dog ant dog</td>
+      <td>ant bee dog hog</td>
+    </tr>
+    <tr>
+      <td>d<sub>3</sub></td>
+      <td>cant gnu dog eel fox</td>
+      <td>cat dog eel fox gnu</td>
+    </tr>
+  </table>
+  <ol>
+    <li>Binary Weights(one-hot encoding/vector)</li>
+    <table>
+      <tr>
+        <td></td>
+        <td>ant</td>
+        <td>bee</td>
+        <td>cat</td>
+        <td>dog</td>
+        <td>eel</td>
+        <td>fox</td>
+        <td>gnu</td>
+        <td>hog</td>
+      </tr>
+      <tr>
+        <td>d<sub>1</sub></td>
+        <td>1</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>d<sub>2</sub></td>
+        <td>1</td>
+        <td>1</td>
+        <td></td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>d<sub>3</sub></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <li>Term Frequency(TF)</li>
+    <table>
+      <tr>
+        <td></td>
+        <td>ant</td>
+        <td>bee</td>
+        <td>cat</td>
+        <td>dog</td>
+        <td>eel</td>
+        <td>fox</td>
+        <td>gnu</td>
+        <td>hog</td>
+      </tr>
+      <tr>
+        <td>d<sub>1</sub></td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>d<sub>2</sub></td>
+        <td>1</td>
+        <td>1</td>
+        <td></td>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>d<sub>3</sub></td>
+        <td></td>
+        <td></td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+        <td></td>
+      </tr>
+    </table>
+    <li>TF-Inverse Document Frequency (TF-IDF): Offsets the frequency by how often a word appears in the corpus.</li>
+    <ul>
+      <li>IDF(t) = 1 + log(N/df(t))</li>
+      <li>N: Number of documents in the corpus.</li>
+      <li>df(t): Number of documents with the term t.</li>
+      <li>General Formula: TF(IDF(t) = TF(t) x IDF(t)</li>
+    </ul>
+    <li>Cosine Similarity</li>
+    <ul>
+      <li>cos(d<sub>i</sub>, d<sub>j</sub>) = V<sub>I</sub> x V<sub>J</sub> / (||V<sub>I</sub>|| ||V<sub>J</sub>||)</li>
+      <li>If Cos approaches 1, documents are similar.</li>
+      <li>If Cos approaches 0, documents are different.</li>
+    </ul>
+    <li>N-Grams: A sequence of 'n' tokens</li>
+    <ul>
+      <li>Ex -- "John likes to watch movies. Mary likes movies too."</li>
+      <li>Bi-Grams: "John likes", "likes to", "to watch", "watch movies", "Mary likes", "likes movies", "movies too"</li>
+    </ul>
+  </ol>
+</ol>
+<p><b>Pros</b>: Intuitive, Easy to Implement, Highly Effective</p>
+<p><b>Cons</b>: Memory issues, synonyms, context</p>
+
+<h2>Classification</h2>
+  Predictive task that uses (1) set of variables for predicting unknown/future values of other variables.
+<ul>
+  <li>Goal: Categorize data points into predefined classes.</li>
+  <li>Process: Use labeled training set to predict class labels of unseen records which is our test set.</li>
+  <ol>
+    <li>Train set: Builds & Trains our Model; contains attri. values and class labels.</li>
+    <li>Test set: Apply model to test, Data used to evaluate a models accuracy</li>
+    <li>Use predicted labels to calculate metrics</li>
+  </ol>
+  <b>--Class Labels must be discrete--</b>.<br><i>Finite/Countably infinite set of values represented by integer variables. Binary attri. are special cases.</i>
+  <li><b>Supervised</b> Learning: Uses predefined labeled class values to train the model.</li>
+  <li><b>Unsupervised</b> Learning: Uses algorithms to analyze unlabeled data & to discover patterns.</li>
+  <li><i>Techniques</i>: Decision Trees, K-NN, Neural Networks, Naive Bayes/ Bayesian Belief Networks, Supper Vector Machines.</li>
+</ul>
+
+<b>
+<li>Metrics</li>
+<ol>
+  <li>Acc.. : TP+TN / TP+TN+FP+FN</li>
+  <li>Err.R. : FP+FN / TP+TN+FP+FN</li>
+  <li>Recall: TP / TP+FN</li>
+  <li>Precision: TP / TP+FP</li>
+</ol>
+</b>
+
+<li>Confusion Matrix</li>
+<img src="confusion_matrix_2x2.png" width="150" height="75" alt="">
+
+<li>Error Types</li>
+<ol>
+  <li>Training Error: Training data</li>
+  <li>Generalization Error: Testing data</li>
+</ol>
+<h2>Naive Bayes</h2>
+Focuses on <b>Sentiment Analysis</b>: Extracting <i>context</i> that a writer may express toward an object.
+<h2>Conditional Probability</h2>
+<B>P(A|B)</B>: Probability of A given B.
+<br>
+<i>P(C) or the probability of each class = <b>Prior</b></i>
+<br>
+Bayes Theorem: P(C|A) = P(A|C) * P(C) / P(A)
+<h2>Conditional Probability Formula</h2>
+  <i>V</i> = Vocab(Set of unique tokens in the data)
+<br>
+  <i>|V|</i> = Cardinality of unique words; size of V
+<br>
+  <i>count(w<sub><i>i</i></sub>, c)</i> = frequency count of 'w<sub><i>i</i></sub>' given class c = fraction of times the word w<sub><i>i</i></sub> appears among all words in all records of class 'c'.
+<br>
+  <i>∑</i>= Sum of the frequency counts of all words in the data for class 'c'.
+</body>
+</html>
